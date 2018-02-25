@@ -128,7 +128,7 @@ class Plugin
     public function enqueue_scripts()
     {
         $prefix = $this->prefix( 'gigo-panel' );
-        $minified = defined( 'WP_DEBUG' ) && WP_DEBUG ? '' : 'min';
+        $minified = defined( 'WP_DEBUG' ) && WP_DEBUG ? '' : '.min';
         $screen = get_current_screen();
 
         if (property_exists($screen, 'id') && $screen->id === 'tools_page_gigo_settings') {
